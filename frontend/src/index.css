@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0F1116;
+}
+
+::selection {
+  background: #C9A667;
+  color: #0F1116;
+}
+
+/* visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+label:focus-visible {
+  outline: 2px solid #C9A667;
+  outline-offset: 3px;
+}
+
+.eyebrow {
+  @apply font-mono text-[11px] tracking-[0.25em] uppercase text-gold/80;
+}
+
+.section-heading {
+  @apply font-display text-3xl sm:text-4xl md:text-5xl leading-[1.08] text-ivory;
+}
+
+.card {
+  @apply bg-ink-soft border border-ink-line rounded-2xl;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
